@@ -1,0 +1,209 @@
+{
+  "info": {
+    "name": "desafio",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "customer",
+      "item": [
+        {
+          "name": "get by id",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/customer/45a4f9bf-acb0-4642-b8c7-56b1f524db24"
+          }
+        },
+        {
+          "name": "update",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": "http://localhost:8080/customer",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"c9720274-72a3-44ea-bf54-ae05173ee017\",\n  \"name\": \"Cleyton Chagas Nunes de Souza\",\n  \"typeAccount\": \"PF\",\n  \"cpfCnpj\": \"45154121451\",\n  \"address\": \"Barueri\",\n  \"password\": \"123456789\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "delete by id",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8080/customer/1bca8379-5c59-4fd8-a31f-511a2ab6accb"
+          }
+        },
+        {
+          "name": "update fields",
+          "event": [],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "http://localhost:8080/customer/9fcef780-4b28-412b-a7ea-7858d0aca01e",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Empresa\"\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "getAll",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          }
+        },
+        {
+          "name": "create PJ",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "http://localhost:8080/customer",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Cleyton Chagas\",\n  \"typeAccount\": \"PJ\",\n  \"cpfCnpj\": \"45154121451\",\n  \"address\": \"Barueri\",\n  \"password\": \"123456789\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "create PF",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "http://localhost:8080/customer",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Cleyton Chagas\",\n  \"typeAccount\": \"PF\",\n  \"cpfCnpj\": \"45154121451\",\n  \"address\": \"Barueri\",\n  \"password\": \"123456789\"\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "account",
+      "item": [
+        {
+          "name": "create",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "http://localhost:8080/account",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"customerId\": \"d7caee7e-ed60-4f97-a146-c465061a24da\",\n  \"agency\": \"103\",\n  \"balance\": 100,\n  \"state\": \"Active\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "get by id",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          }
+        },
+        {
+          "name": "update fields",
+          "event": [],
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "http://localhost:8080/account/72ae53bb-7e7a-4a91-b626-65dba5b58d31",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n   \"agency\": \"100\",\n    \"balance\": 10.0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "get all account",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          }
+        }
+      ]
+    },
+    {
+      "name": "payment",
+      "item": [
+        {
+          "name": "create",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "http://localhost:8080/payment",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"senderAccountId\": \"626c770b-7d82-4182-ba78-11527c235d66\",\n  \"destinationAccountId\": \"fdde43a7-b674-4c5c-8d9a-32a93b927252\",\n  \"paymentValue\": 20\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "notify",
+      "item": [
+        {
+          "name": "notify mock",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "https://run.mocky.io/v3/9769bf3a-b0b6-477a-9ff5-91f63010c9d3"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": []
+}
