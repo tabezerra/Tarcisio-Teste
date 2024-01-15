@@ -13,11 +13,11 @@ API RestFull usando **Java, Java Spring, H2 as the database.**
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/
+git clone https://github.com/tabezerra/Tarcisio-Teste.git
 ```
 2. Install dependencies with Maven
 ```bash
-git clone https://github.com/
+git clone https://github.com/tabezerra/Tarcisio-Teste.git
 ```
 
 4. Run on port `8080`
